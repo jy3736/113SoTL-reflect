@@ -487,3 +487,53 @@ html.tablet .say.pod,html.tablet .honors .mbcap,html.tablet .mb .yr,html.tablet 
 .cover .res113-overview{margin-top:2cqw}.honors .res113-overview{margin-top:1.3cqw}
 @media(min-width:901px){.res .semantic-topic{width:24cqw!important;height:auto!important;max-width:none!important;right:2cqw!important;bottom:7cqw!important}.part .semantic-topic{width:29cqw;height:auto}.qa .semantic-topic{width:29cqw;height:auto}}
 @media(max-width:900px){.slide h1{text-wrap:balance}.res113-overview{margin-top:24px}.cover .res113-overview,.honors .res113-overview{margin-top:24px}.res .semantic-topic{width:min(100%,320px)!important;height:auto!important;max-width:none!important;position:static!important;margin:22px auto 0!important}.part .semantic-topic,.qa .semantic-topic{width:min(100%,320px);height:auto}}
+
+/* Shared layout for the active 42-slide deck. Appended by build_deck.py.
+   Content diagrams retain their own semantics and source images. */
+.slide{--slide-x:5cqw;--slide-top:3.4cqw;--title-size:3.2cqw;--lead-size:1.55cqw;--summary-size:1.6cqw}
+#deck .slide .pad{padding:var(--slide-top) var(--slide-x) 6cqw}
+#deck .cover h1 span{display:inline-block}
+#deck .slide .eyebrow{margin:0 0 1.2cqw;font-size:1.35cqw;line-height:1.5}
+#deck .slide .eyebrow span{font-size:1.15cqw}
+#deck .slide h1{font-size:var(--title-size);line-height:1.3;text-wrap:balance}
+#deck .slide :is(.res-lead,.refine-lead,.refined-context){font-size:var(--lead-size);line-height:1.5;margin:.65cqw 0 1.2cqw}
+#deck .slide .takeaway{font-size:var(--summary-size);line-height:1.5;min-height:3.5cqw;padding:1cqw 0 0;margin-top:auto;align-items:center}
+#deck .slide .ex-toggle{font-size:1.2cqw;line-height:1.5;padding:.5cqw 1.1cqw;border-radius:999px}
+#deck .slide .foot{left:var(--slide-x);right:var(--slide-x);bottom:1.7cqw;font-size:1.1cqw;line-height:1.4}
+#deck .slide .foot b{position:static;margin-left:auto;font-size:1.3cqw;line-height:1.4}
+
+@media(min-width:901px){
+  /* A common visual area between the lead and the takeaway. */
+  #deck .slide :is(.refine-figure,.refined-figure){flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;margin:0;width:100%}
+  #deck .slide :is(.refine-figure,.refined-figure) picture{display:block;min-height:0}
+  #deck .slide :is(.refine-figure,.refined-figure) img{display:block;width:100%;height:auto;max-height:27cqw;object-fit:contain}
+  #deck .slide :is(.refine-figure,.refined-figure) figcaption{font-size:1.25cqw;line-height:1.5;margin:.5cqw 0 0;color:var(--muted)}
+  #deck .slide:is(.cover,.part,.qa){--title-size:3.8cqw}
+  #deck .cover .subtitle{font-size:2cqw;line-height:1.5}
+  #deck .slide:is(.part,.qa) .part-wrap{flex:1;margin:0;align-content:center}
+  #deck .slide:is(.part,.qa) .semantic-topic{width:100%;max-width:100%;height:auto}
+  #deck .part .part-route{margin:1.4cqw 0 0}
+  #deck .qa .takeaway{max-width:none}
+  #deck .honors .honor-end{margin-top:auto}
+}
+
+@media(max-width:900px){
+  #deck .slide{--slide-x:24px;--slide-top:26px;--title-size:27px;--lead-size:16px;--summary-size:17px}
+  #deck .slide .pad{padding-bottom:70px}
+  #deck .slide .eyebrow{font-size:12px;line-height:1.5;margin-bottom:18px}
+  #deck .slide .eyebrow span{font-size:12px}
+  #deck .slide h1{line-height:1.4;text-wrap:pretty;line-break:strict;overflow-wrap:anywhere}
+  #deck .slide :is(.res-lead,.refine-lead,.refined-context){margin:12px 0 20px;line-height:1.65}
+  #deck .slide :is(.refine-figure,.refined-figure){margin:0;min-height:0;width:100%}
+  #deck .slide :is(.refine-figure,.refined-figure) img{width:100%;height:auto;max-height:none}
+  #deck .slide :is(.refine-figure,.refined-figure) figcaption{font-size:15px;line-height:1.65;margin:14px 0 0}
+  #deck .slide .takeaway{min-height:0;margin:0;padding-top:24px;align-items:flex-start;gap:14px}
+  #deck .slide .ex-toggle{font-size:15px;line-height:1.5;padding:9px 16px}
+  #deck .slide .pad>.topic-graphic{order:1}
+  #deck .slide .pad>.takeaway{order:2}
+  #deck .slide .foot{bottom:18px;font-size:11px}
+  #deck .slide .foot b{font-size:12px}
+  #deck .slide:is(.cover,.part,.qa){--title-size:30px}
+  #deck .slide:is(.part,.qa) .part-wrap{margin:0}
+  #deck .honors .honor-end{margin-top:24px}
+}
