@@ -107,4 +107,7 @@ let resizing;
 window.addEventListener('resize',()=>{clearTimeout(resizing);resizing=setTimeout(()=>go(current),120);});
 const initial=slides.findIndex(s=>`#${s.id}`===location.hash&&!s.hidden);
 update(Math.max(0,initial),false);
+// Open in 滿版 by default. Browsers only allow real fullscreen after a user gesture, so tablets enter it on the first tap.
+togglePresent(true);
+if(tablet)document.addEventListener('pointerup',e=>{if(!e.target.closest('#present-toggle')&&document.documentElement.classList.contains('present'))setFullscreen(true);},{once:true});
 window.addEventListener('load',()=>go(Math.max(0,initial)));
