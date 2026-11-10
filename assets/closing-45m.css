@@ -1,0 +1,40 @@
+/* Closing page echoes the cover; all rules are local to s44. */
+#deck #s44 .closing-hero{display:grid;grid-template-columns:1fr 1.2fr;gap:5cqw;align-items:center;flex:1;min-height:0}
+#deck #s44 .closing-en{font-size:5.2cqw;line-height:1.2;letter-spacing:-.035em;color:var(--teal);margin:0 0 .8cqw;font-weight:500}
+#deck #s44 h1{font-size:3.65cqw;line-height:1.3;text-wrap:initial;white-space:nowrap}
+#deck #s44 .closing-invite{font-size:1.85cqw;line-height:1.6;margin:1.1cqw 0 0;color:var(--muted)}
+#deck #s44 .closing-message{margin:2cqw 0 0;padding-left:1.2cqw;border-left:3px solid #b8cbc3}
+#deck #s44 .closing-message p{margin:0;font-size:1.55cqw;line-height:1.8;color:var(--teal);font-weight:700}
+#deck #s44 .closing-message p+p{color:var(--gold)}
+#deck #s44 .closing-author{display:flex;align-items:baseline;gap:1cqw;margin-top:2cqw}
+#deck #s44 .closing-author b{font-size:1.65cqw}
+#deck #s44 .closing-author span{font-size:1.15cqw;color:var(--muted)}
+#deck #s44 .closing-discussion{border-left:1px solid #cbd8d3;padding-left:2.5cqw}
+#deck #s44 .closing-discussion h2{font-size:1.7cqw;line-height:1.5;margin:0 0 1cqw}
+#deck #s44 .closing-discussion ol{list-style:none;margin:0;padding:0}
+#deck #s44 .closing-discussion li{display:flex;gap:1.2cqw;padding:1.1cqw 0;border-bottom:1px solid #dde3e0}
+#deck #s44 .closing-discussion li>b{font-size:1.15cqw;line-height:1.7;color:var(--teal);font-weight:500;padding-top:.1cqw}
+#deck #s44 .closing-discussion h3{font-size:1.5cqw;line-height:1.5;margin:0 0 .25cqw}
+#deck #s44 .closing-discussion li p{font-size:1.25cqw;line-height:1.6;margin:0;color:var(--muted)}
+#deck #s44 .closing-discussion li:last-child h3,#deck #s44 .closing-discussion li:last-child>b{color:var(--gold)}
+#deck #s44 .closing-return{font-size:1.4cqw;font-weight:700;line-height:1.6;color:var(--teal);margin:1.8cqw 0 0;padding-top:1.5cqw;border-top:1px solid #b8cbc3}
+#deck #s44 .closing-return span{padding:0 1cqw;color:var(--muted)}
+@media(max-width:900px){
+ #deck #s44 .closing-hero{display:flex;flex-direction:column;gap:28px;align-items:stretch}
+ #deck #s44 .closing-en{font-size:45px;line-height:1.2;margin-bottom:10px}
+ #deck #s44 h1{font-size:32px;white-space:normal}
+ #deck #s44 .closing-invite{font-size:18px;line-height:1.6;margin-top:12px}
+ #deck #s44 .closing-message{margin-top:22px;padding-left:12px}
+ #deck #s44 .closing-message p{font-size:17px;line-height:1.8}
+ #deck #s44 .closing-author{flex-direction:column;gap:4px;margin-top:22px}
+ #deck #s44 .closing-author b{font-size:22px}
+ #deck #s44 .closing-author span{font-size:14px}
+ #deck #s44 .closing-discussion{border-left:0;border-top:1px solid #cbd8d3;padding:22px 0 0}
+ #deck #s44 .closing-discussion h2{font-size:18px;line-height:1.6;margin:0 0 8px}
+ #deck #s44 .closing-discussion li{gap:12px;padding:15px 0}
+ #deck #s44 .closing-discussion li>b{font-size:13px;padding-top:2px}
+ #deck #s44 .closing-discussion h3{font-size:17px;margin-bottom:5px}
+ #deck #s44 .closing-discussion li p{font-size:15px;line-height:1.7}
+ #deck #s44 .closing-return{font-size:14px;line-height:1.8;margin-top:24px;padding-top:20px}
+ #deck #s44 .closing-return span{padding:0 3px}
+}
