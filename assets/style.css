@@ -550,3 +550,33 @@ html.tablet .say.pod,html.tablet .honors .mbcap,html.tablet .mb .yr,html.tablet 
  #deck .reflection-refined .takeaway{font-size:17px}
  #deck .reflection-refined .pad{display:flex;flex-direction:column}
 }
+
+/* Shared chapter openers and closing principles: 03, 07, 13, 23, 41. */
+#deck .chapter-unified .chapter-wrap{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(0,1fr);gap:3cqw;align-items:center;flex:1;min-height:0;margin:0}
+#deck .chapter-unified .chapter-copy{min-width:0}
+#deck .chapter-unified .part-no{font-size:1.35cqw;margin:0 0 .65cqw;color:var(--gold);font-weight:700}
+#deck .chapter-unified h1{font-size:3.2cqw;line-height:1.35;text-wrap:balance}
+#deck .chapter-unified .part-lead{font-size:1.65cqw;line-height:1.6;margin:.8cqw 0 1.3cqw}
+#deck .chapter-unified .part-list{display:grid;gap:.65cqw;margin:0;padding:0;list-style:none}
+#deck .chapter-unified .part-list li{font-size:1.5cqw;line-height:1.5;padding:.65cqw 1.15cqw;border-left:.22cqw solid var(--teal);border-radius:.6cqw}
+#deck .chapter-unified .chapter-figure{margin:0;width:100%;min-width:0}
+#deck .chapter-unified .chapter-figure img{display:block;width:100%;height:auto;max-height:34cqw;object-fit:contain}
+#deck .chapter-unified .part-route{margin:1.4cqw 0 0}
+#deck .chapter-unified .chapter-caution{font-size:1.1cqw;line-height:1.6;color:var(--muted);margin:1cqw 0 0}
+#deck .chapter-unified .takeaway{font-size:1.45cqw;margin:1cqw 0 0;padding:0;min-height:3cqw}
+@media(max-width:900px){
+ #deck .chapter-unified .chapter-wrap{grid-template-columns:1fr;gap:24px;flex:none}
+ #deck .chapter-unified .part-no{font-size:13px;margin:0 0 8px}
+ #deck .chapter-unified h1{font-size:28px;line-height:1.4;text-wrap:pretty}
+ #deck .chapter-unified .part-lead{font-size:17px;line-height:1.7;margin:12px 0 18px}
+ #deck .chapter-unified .part-list{gap:9px}
+ #deck .chapter-unified .part-list li{font-size:16px;line-height:1.6;padding:10px 14px;border-left-width:3px;border-radius:7px}
+ #deck .chapter-unified .chapter-figure{width:min(100%,340px);justify-self:center}
+ #deck .chapter-unified .chapter-figure img{max-height:none}
+ #deck .chapter-unified .part-route{margin:24px 0 0}
+ #deck .chapter-unified .chapter-caution{font-size:14px;line-height:1.65;margin:16px 0 0}
+ #deck .chapter-unified .takeaway{font-size:17px;line-height:1.6;margin:22px 0 0;padding:0;min-height:0}
+}
+
+#deck .chapter-closing .takeaway{display:flex;align-items:center;justify-content:space-between;gap:1.6cqw}
+@media(max-width:900px){#deck .chapter-closing .takeaway{flex-direction:column;align-items:flex-start;gap:14px}}
